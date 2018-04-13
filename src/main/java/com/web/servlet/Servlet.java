@@ -482,17 +482,13 @@ public class Servlet extends BaseServlet {
         String readerbarcode =req.getParameter("readerbarcode");
         String addtype =req.getParameter("f");
         String inputkey =req.getParameter("inputkey");
-        if ( inputkey ==""){
+        if ( inputkey==""){
             inputkey="0";
         }
         int bookid =Services.getbookid(addtype,inputkey);
         String operator =req.getParameter("operator");
         String readerid =req.getParameter("readerid");
-//         if(bookid<=0){
-//             req.setAttribute("readerbarcode",readerbarcode);
-//             req.setAttribute("para",1);
-//             return "/bookBorrow_ok.jsp";
-//         }
+
         if (bookid>0){
             Services.addreaderborrowmsg(bookid,readerid,operator);
         }
