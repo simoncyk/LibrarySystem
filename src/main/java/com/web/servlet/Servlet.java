@@ -497,7 +497,11 @@ public class Servlet extends BaseServlet {
         req.getServletContext().setAttribute("borrowNumber", Services.borrowNumber(readerbarcode ));
         return  "r:/bookBorrow.jsp";
     }
+    public String test (HttpServletRequest req ,HttpServletResponse reqs)throws Exception {
 
+        // 'simon2018-04-15 测试修改共享问题'
+        return  "r:/bookBorrow.jsp";
+    }
 
 
 
